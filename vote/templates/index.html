@@ -13,13 +13,28 @@
   <body>
     <div id="content-container">
       <div id="content-container-center">
-        <h3>{{option_a}} vs {{option_b}}!</h3>
-        <form id="choice" name='form' method="POST" action="/">
-          <button id="a" type="submit" name="vote" class="a" value="a">{{option_a}}</button>
-          <button id="b" type="submit" name="vote" class="b" value="b">{{option_b}}</button>
-        </form>
-        <div id="tip">
-          (Tip: you can change your vote)
+        <div id="vote">
+          <h3>{{option_a}} vs {{option_b}}!</h3>
+          <form id="choice" name='form' method="POST" action="/">
+            <button id="a" type="submit" name="vote" class="a" value="a">{{option_a}}</button>
+            <button id="b" type="submit" name="vote" class="b" value="b">{{option_b}}</button>
+          </form>
+          <div id="tip">
+            (Tip: you can change your vote)
+          </div>
+        </div>
+        <div class="werf-success">
+          <div class="werf-success__text">
+            <h3>Congratulations!</h3>
+            <p>You have successfully deployed your first application using werf! Please let us know about your achievement by clicking the button below.</p>
+          </div>
+          <a href="werf.io/quickstart-success.html" target="_blank" class="werf-success__button">
+            Count me in!
+          </a>
+          <div class="werf-success__text">
+            <p>Clicking on this button will fill our anonymized data with another successful deployment of our demo app. It will help us a lot, really! Thank you!</p>
+            <small>P.S. GitHub stars for <a href="https://github.com/werf/werf" target="_blank">werf</a> itself and <a href="https://github.com/werf/quickstart-application" target="_blank">quickstart-application</a> are also much appreciated ;-)</small>
+          </div>
         </div>
         <div id="hostname">
           Processed by container ID {{hostname}}
