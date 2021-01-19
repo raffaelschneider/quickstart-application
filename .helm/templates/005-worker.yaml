@@ -14,6 +14,8 @@ spec:
       labels:
         app: worker
     spec:
+      imagePullSecrets:
+        - name: regsecret
       containers:
       - image: {{ tuple "worker" . | include "werf_image" }}
         name: worker

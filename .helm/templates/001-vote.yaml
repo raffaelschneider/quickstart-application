@@ -14,6 +14,8 @@ spec:
       labels:
         app: vote
     spec:
+      imagePullSecrets:
+        - name: regsecret
       containers:
       - image: {{ tuple "vote" . | include "werf_image" }}
         name: vote
