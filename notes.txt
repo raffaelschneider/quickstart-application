@@ -1,0 +1,6 @@
+minikube start --driver=docker
+
+werf converge --repo raffaelschneider/quickstart-application --repo-docker-hub-token caf02c3e-d481-4f05-8353-0bcf69ffd668
+
+minikube service --namespace quickstart-application --url vote 
+minikube service --namespace quickstart-application --url result 
